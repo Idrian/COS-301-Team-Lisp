@@ -58,24 +58,36 @@
 	\pagenumbering{arabic}
 	\newpage
 		
-	%\section{Specific Requirements}
+	\section{External interface requirements}
+External interface requirements discuss how the external features of the system are communicating with one another and how information is received and sent.\\\\
+The User will primarily interact with the NavUP system via their mobile devices. The User will use input such as text, for logins or searching of venues, and gestures, such as clicking or navigating through the map. These input methods interface with the software of the mobile application and will send and receive data through the Wi-Fi or GPS systems of the mobile device. \\\\
+The device will communicate with its GPS system to gain GPS coordinates through satellite information and send this data with other data through the Wi-Fi. The Wi-Fi will send this data/information to the nearest router on campus where more information about the Users location can be gathered, this new data along with the previous ones are then sent to the external server where the database is hosted.\\\\
+The server maintains the database and handles all incoming request based on the data received by the various external devices and methods along the way. Based on the request the server searches the database and retrieves the relative information and sends it back to User through the Wi-Fi in a similar route it came. The NavUP application will then update the output to represent the data retrieved from the request.
+
+	\section{Performance requirements}
 	
-		%\subsection{Functional Requirements}
+	\section{Design constraints}
+
+	\section{Software system attributes}
 		
-			%\subsubsection{Requirements Summary}
-			%\begin{itemize}
-	    	%\item Find the optimal route
-			%\end{itemize}
-		
-			%\subsubsection{Use Cases}
-		
-			%\includepdf[pages=-,pagecommand={},width=\textwidth]{use_case_diagrams.pdf}
+	\section{UML Diagrams}
+	The 4 modules we decided to model and design further are :
+	\begin{itemize}
+		\item[$\bullet$] User management
+		\item[$\bullet$] Navigation
+		\item[$\bullet$] Points of interest
+		\item[$\bullet$] and Notification
+	\end{itemize}
+		\subsection{Class diagrams}
+		\subsection{Deployment diagrams}
+		\subsection{Use case diagrams}	
+	
 		
 			%\subsubsection{Actor-system interaction}
 		
 			%\includegraphics[width=\linewidth]{actor1.png}
 		
-			%\subsubsection{Traceability}
+			
 	
 		
 \end{document}
