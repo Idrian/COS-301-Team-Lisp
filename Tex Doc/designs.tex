@@ -58,24 +58,46 @@
 	\pagenumbering{arabic}
 	\newpage
 		
-	%\section{Specific Requirements}
+	\section{External interface requirements}
+External interface requirements discuss how the external features of the system are supposed to communicate with one another and how information is received and sent.\\\\
+The User will primarily interact with the NavUP system via their mobile devices. The User will use input such as text, for logins or searching of venues, and gestures, such as clicking or navigating through the map. These input methods should be able to interface with the software of the mobile application to send and receive data through the Wi-Fi or GPS systems of the mobile device. \\\\
+The device will communicate with its GPS system to gain GPS coordinates through satellite information and send this data with other data through the Wi-Fi. The mobile devices Wi-Fi hardware should send this data/information to the nearest router on campus where more information about the Users current location can be gathered, this new data along with the previous ones are then sent to the external server where the database is hosted.\\\\
+The server must maintain the database and handle all incoming request based on the data received by the various external devices and methods along the way. Based on the request the server searches the database and retrieves the relative information and sends it back to User through the Wi-Fi in a similar route it came.\\\\
+Once the data is back on the mobile device the NavUP application should then perform the necessary functions and invoke the necessary classes to gain the required results. The NavUP application will then update the output to represent the data retrieved from the request and that was calculated by the various functions and classes.
+
+	\section{Performance requirements}
+	\subsection{Sending and recieving of data}
+The NavUP system must be able to send and retrieve relative information in real-time. The User application should be able to constantly update the users\' \ current position and the generated map in order to accurately display it on the users\' \ mobile device. In order for this information to be displayed properly the server should be able to filter through the relative data quickly based on the incoming requests in order to send it to user as quickly as possible. The users\' \ mobile device should also be able to do the necessary calculations based on the data received from the server, since the server will send as little data as possible in order to handle more request more frequently, so it is expected that the mobile device will be able to quickly do the desired functions and calculations. 
+	\subsection{Offline mode}
+Since the Hatfield campus does not constantly have Wi-Fi across the campus it would be best if certain information could run in an offline mode i.e. the user should still be able to see the map and the desired route so navigation is still possible between the few areas that do not have a Wi-Fi signal. This could be done by saving proxies of the server on the users\' \ mobile device that only contain the needed information to maintain an offline functionality.
+	\subsection{Difference in users}
+The system contains different types/levels of users and they only share some functionality with one another. The system should inforce and maintain these differences i.e. it should not allow a regular user to add and delete points of interest, only an administrative user should be able to it. 
+	\subsection{Accessibility and generated paths}
+There are many differences in people without there being differences in the types of users our system recognises, therefore the NavUP system should be able to cater for these people with disabilities and different preferences. The path generation takes into account a list of preferences the user has, this list would include information such as ,avoid stairs,  if the person is in a wheelchair. Another matter being with just the user interface itself, some users are colour-blind and therefore might need a colour blind mode in-order to follow the map accurately.  
+	\subsection{Notification}
+Notifications should not halt or impede the functionality of any other feature of the system. The user should simply see on the interface that a notification is available and be able to view it later. There are exceptions however, for instance an emergency notification might be able to halt the current interface and path generation in order to forcibly display the notification. 
+	\section{Design constraints}
+
+	\section{Software system attributes}
+		
+	\section{UML Diagrams}
+	The 4 modules we decided to model and design further are :
+	\begin{itemize}
+		\item[$\bullet$] User management
+		\item[$\bullet$] Navigation
+		\item[$\bullet$] Points of interest
+		\item[$\bullet$] and Notification
+	\end{itemize}
+		\subsection{Class diagrams}
+		\subsection{Deployment diagrams}
+		\subsection{Use case diagrams}	
 	
-		%\subsection{Functional Requirements}
-		
-			%\subsubsection{Requirements Summary}
-			%\begin{itemize}
-	    	%\item Find the optimal route
-			%\end{itemize}
-		
-			%\subsubsection{Use Cases}
-		
-			%\includepdf[pages=-,pagecommand={},width=\textwidth]{use_case_diagrams.pdf}
 		
 			%\subsubsection{Actor-system interaction}
 		
 			%\includegraphics[width=\linewidth]{actor1.png}
 		
-			%\subsubsection{Traceability}
+			
 	
 		
 \end{document}
