@@ -65,7 +65,7 @@ The server must maintain the database and handle all incoming request based on t
 Once the data is back on the mobile device the NavUP application should then perform the necessary functions and invoke the necessary classes to gain the required results. The NavUP application will then update the output to represent the data retrieved from the request and that was calculated by the various functions and classes.
 
 	\section{Performance requirements}
-	\subsection{Sending and recieving of data}
+	\subsection{Sending and receiving of data}
 The NavUP system must be able to send and retrieve relative information in real-time. The User application should be able to constantly update the users\' \ current position and the generated map in order to accurately display it on the users\' \ mobile device. In order for this information to be displayed properly the server should be able to filter through the relative data quickly based on the incoming requests in order to send it to user as quickly as possible. The users\' \ mobile device should also be able to do the necessary calculations based on the data received from the server, since the server will send as little data as possible in order to handle more request more frequently, so it is expected that the mobile device will be able to quickly do the desired functions and calculations. 
 	\subsection{Offline mode}
 Since the Hatfield campus does not constantly have Wi-Fi across the campus it would be best if certain information could run in an offline mode i.e. the user should still be able to see the map and the desired route so navigation is still possible between the few areas that do not have a Wi-Fi signal. This could be done by saving proxies of the server on the users\' \ mobile device that only contain the needed information to maintain an offline functionality.
@@ -78,9 +78,9 @@ Notifications should not halt or impede the functionality of any other feature o
 	\section{Design constraints}
 	The client has provided us with free reign in most areas of the development of the NavUP system. Some of the stated design constraints include:
 		\begin{itemize}
-			\item[$\bullet$] The application has to prioritise accessibility, so disabled users can make the most of it.
-			\item[$\bullet$] The system should have support for multiple devices and services.
-			\item[$\bullet$] The system should make use of some sort of crowd-sourcing or Wi-Fi triangulation.
+			\item[$\bullet$] Time constraint: The system has to be implemented by 21 April 2017.
+			\item[$\bullet$] Platform constraint: The system should have support for multiple devices and services.
+			\item[$\bullet$] Technology constraint: The system should make use of some sort of crowd-sourcing or Wi-Fi triangulation.
 		\end{itemize}
 
 	\section{Software system attributes}
