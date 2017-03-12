@@ -12,7 +12,7 @@
 \usepackage{textcomp}
 \usepackage{amstext}
 \usepackage[final]{pdfpages}
-
+\usepackage{caption}
 
 
 \graphicspath{{Pictures/}}
@@ -56,6 +56,26 @@
 
 	\pagenumbering{arabic}
 	\newpage
+	
+	\section{Introduction}
+		Using the software system requirements (SRS) provided, this document aims to specify the architectural design specifications needed to satisfy those requirements.
+	\newline
+	\newline
+		The architectural design specifications for the following four modules are provided:
+	\begin{itemize}
+		\item[$\bullet$] User Management
+		\item[$\bullet$] Navigation
+		\item[$\bullet$] Points of Interest
+		\item[$\bullet$] Notification
+	\end{itemize}
+	\medskip
+	Firstly the external interface requirements are documented, followed by the performance requirements, the design constraints, the software system attributes, and then finally the various UML diagrams are provided, namely class diagrams, a deployment diagram, use case diagrams, activity diagrams, and sequence diagrams.
+	
+	\subsection{Model-View-Controller (MVC) Pattern}
+	The Model-View-Controller (MVC) architectural pattern is used in the NavUP system to allow the decoupling of the data and from the operations that are performed on them, and to update the view based on either.
+	\newline
+	\newline
+	It also has the benefit of enabling multiple users to perform the same operations, since the data is kept separate.
 		
 	\section{External interface requirements}
 External interface requirements discuss how the external features of the system are supposed to communicate with one another and how information is received and sent.\\\\
@@ -77,11 +97,9 @@ There are many differences in people without there being differences in the type
 Notifications should not halt or impede the functionality of any other feature of the system. The user should simply see on the interface that a notification is available and be able to view it later. There are exceptions however, for instance an emergency notification might be able to halt the current interface and path generation in order to forcibly display the notification. 
 	\section{Design constraints}
 	The client has provided us with free reign in most areas of the development of the NavUP system. Some of the stated design constraints include:
-		\begin{itemize}
-			\item[$\bullet$] Time constraint: The system has to be implemented by 21 April 2017.
-			\item[$\bullet$] Platform constraint: The system should have support for multiple devices and services.
-			\item[$\bullet$] Technology constraint: The system should make use of some sort of crowd-sourcing or Wi-Fi triangulation.
-		\end{itemize}
+			\subsection{Time constraint}	The system has to be implemented by 21 April 2017.	
+			\subsection{Platform constraint}	The system should have support for multiple devices and services.
+			\subsection{Technology constraint}	The system should make use of some sort of crowd-sourcing or Wi-Fi triangulation.	
 
 	\section{Software system attributes}
 	\subsection{Scalability}
@@ -116,17 +134,11 @@ Notifications should not halt or impede the functionality of any other feature o
 	\newline
 	{Quantification:} The system must expose instrumentation to monitor and debug performance.
 	
-	\section{UML Diagrams}
-	The 4 modules we decided to model and design further are:
-	\begin{itemize}
-		\item[$\bullet$] User Management
-		\item[$\bullet$] Navigation
-		\item[$\bullet$] Points of Interest
-		\item[$\bullet$] Notification
-	\end{itemize}
+	
 		\clearpage
 		
-		\includepdf[scale=0.9,pages=-,pagecommand=\subsection{Class diagrams}\subsubsection{Points of Interest}]{class_diagram_poi.pdf}
+		\includepdf[scale=0.9,pages=-,pagecommand=\section{UML Diagrams}\subsection{Class diagrams}\subsubsection{Points of Interest}]{class_diagram_poi.pdf}
+		
 		\includepdf[scale=0.9,pages=-,pagecommand=\subsubsection{Navigation}]{class_diagram_nav.pdf}
 		\includepdf[scale=0.9,pages=-,pagecommand=\subsubsection{Notifications}]{class_diagram_not.pdf}
 		\includepdf[scale=0.9,pages=-,pagecommand=\subsubsection{Manage Accounts}]{class_diagram_manage.pdf}
